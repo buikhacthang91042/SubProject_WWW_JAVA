@@ -28,32 +28,31 @@ public class UserServiceIMPL implements UserService {
 		this.restClient = restClient;
 		this.objectMapper = objectMapper;
 	}
-
+	
 	@Override
 	public APResponse registerUser(User user) {
-	    try {
-	        // Gửi yêu cầu POST tới backend để đăng ký người dùng
+		
+	       
 	        return restClient.post()
-	                .uri(diaChi + "/register")  // Sử dụng từUriString thay vì fromHttpUrl
+	                .uri(diaChi + "/register")  
 	                .accept(MediaType.APPLICATION_JSON)
+	                .body(user)
 	                .exchange((request, response) -> {
-	                    APResponse apResponse = null;
-	                    if (response.getBody().available() > 0) {
-	                        // Đọc dữ liệu từ phản hồi và chuyển thành đối tượng APResponse
+	                	System.out.println(diaChi + "/register");
+	                	System.out.println("gọi");
+	                 APResponse apResponse = null;
+	                    if (response.getBody().available() > 0) { 
+	                        
 	                        apResponse = objectMapper.readValue(response.getBody(), APResponse.class);
 	                    }
 	                    return apResponse;
 	                });
-	    } catch (RestClientException e) {
-	        // Xử lý lỗi và trả về thông báo lỗi
-	        return new APResponse(500, null, null, "Registration failed: " + e.getMessage());
-	    }
 	}
-
+	
 	@Override
 	public APResponse loginUser(String username, String password) {
 	    try {
-	        // Xây dựng URL cho yêu cầu login
+	       
 	        String url = UriComponentsBuilder.fromUriString(diaChi)
 	                .path("/login")
 	                .queryParam("username", username)
@@ -77,7 +76,5 @@ public class UserServiceIMPL implements UserService {
 	        return new APResponse(500, null, null, "Login failed: " + e.getMessage());
 	    }
 	}
-
-
 
 }

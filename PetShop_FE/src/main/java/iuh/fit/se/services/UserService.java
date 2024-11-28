@@ -5,8 +5,8 @@ import iuh.fit.se.utils.APResponse;
 
 public interface UserService {
 
-	APResponse registerUser(User user);
-	APResponse loginUser(String username, String password);
+	public APResponse registerUser(User user);
+	public APResponse loginUser(String username, String password);
 
 
   

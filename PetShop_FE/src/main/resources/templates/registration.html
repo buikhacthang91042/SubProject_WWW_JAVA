@@ -4,29 +4,29 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Viserpet HTML Template</title>
+    <title> Viserpet HTML Template</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" th:href="@{/assets/images/logo/favicon.png}">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <!-- Bootstrap -->
-    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome -->
-    <link rel="stylesheet" th:href="@{/assets/css/fontawesome-all.min.css}">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <!-- Slick -->
-    <link rel="stylesheet" th:href="@{/assets/css/slick.css}">
-    <!-- Line Awesome -->
-    <link rel="stylesheet" th:href="@{/assets/css/line-awesome.min.css}">
-    <!-- Countdown CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/jquery.classycountdown.min.css}">
-    <!-- Range CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/jquery-ui.css}">
-    <!-- Magnific CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/magnific-popup.css}">
-    <!-- Main CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/main.css}">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- line awesome -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <!-- countdown css link-->
+    <link rel="stylesheet" href="assets/css/jquery.classycountdown.min.css">
+    <!-- range css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- magnific css link -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     
@@ -53,38 +53,39 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-between">    
             <div class="top-contact">
-                <a href="/" class="top-contact__logo">
-                    <img th:src="@{/assets/images/logo/logo02.png}" alt="logo">
+                <a href="index.html" class="top-contact__logo">
+                   <img th:src="@{/assets/images/logo/logo02.png}" alt="logo">
+
                 </a>
             </div>      
-            <div class="d-flex flex-wrap align-items-center justify-content-center">
-                <div class="d-md-block d-none">
+              <div class="d-flex flex-wrap align-items-center justify-content-center">
+                   <div class="d-md-block d-none">
                     <div class="contact-list__wrapper d-flex flex-wrap justify-content-between">
-                        <div class="contact-list style-two">
+                    <div class="contact-list style-two">
                             <span class="contact-list__icon"> 
-                                <img th:src="@{/assets/images/icons/phone.png}" alt="">
+                                <img src="assets/images/icons/phone.png" alt="">
                             </span>
                             <span class="contact-list__info"> 000 - 8888 - 9999</span>
-                        </div>
-                        <div class="contact-list">
+                      </div>
+                      <div class="contact-list">
                             <span class="contact-list__icon"> 
-                                <img th:src="@{/assets/images/icons/email.png}" alt="">
+                               <img th:src="@{/assets/images/icons/email.png}" alt="Email Icon">
+
                             </span>
-                            <span class="contact-list__info"> 
-                                <a href="mailto:email@example.com" class="__cf_email__">[email&#160;protected]</a>
-                            </span>
-                        </div>
+                            <span class="contact-list__info"> <a href="https://template.viserlab.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="76001f05130406130236111b171f1a5815191b">[email&#160;protected]</a></span>
                     </div>
-                </div>
-                <div class="currency-box">
+                    </div>
+                   </div>
+                   <div class="currency-box">
                     <select class="select">
                         <option selected>USD</option>
                         <option value="1">EURO</option>
                         <option value="2">RUPI</option>
                         <option value="3">DINAR</option>
                     </select>
-                </div>
-            </div>
+                   </div>
+              </div>
+           
         </div>
     </div>
 </div>
@@ -94,125 +95,93 @@
     <ul class="category-menu-two">
         <li class="category-menu-two__item has-dropdown-two">
             <a href="#" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/dog01.png}" alt="">
-                </span> Dog Food 
-                <span class="category-menu-two__icon">
-                    <i class="las la-angle-down"></i>
-                </span>
-            </a>
+                <span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/dog01.png}" alt="Dog Icon">
+</span> Dog Food <span class="category-menu-two__icon"><i class="las la-angle-down"></i></span></a>
             <ul class="category-dropdown-two">
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/dog01.png}" alt="">
+                            <img th:src="@{/assets/images/icons/dog01.png}" alt="Dog Icon">
                         </span> Category Dropdown One</a>
                 </li>
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/dog01.png}" alt="">
+                           <img th:src="@{/assets/images/icons/dog01.png}" alt="Dog Icon">
                         </span> Category Dropdown Two</a>
                 </li>
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/dog01.png}" alt="">
+                            <img th:src="@{/assets/images/icons/dog01.png}" alt="Dog Icon">
                         </span> Category Dropdown Three</a>
                 </li>
             </ul>
         </li>
         <li class="category-menu-two__item">
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/cat.png}" alt="">
-                </span> Cat 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"><span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/cat.png}" alt="Cat Icon">
+</span> Cat </a>
         </li>
         <li class="category-menu-two__item">
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/fish.png}" alt="">
-                </span> Fish 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"> <span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/fish.png}" alt="Fish Icon"></span> Fish </a>
         </li>
         <li class="category-menu-two__item">                 
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/toys.png}" alt="">
-                </span> Pet toy 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"><span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/toys.png}" alt="Toys Icon"></span> Pet toy </a>
         </li>
         <li class="category-menu-two__item has-dropdown-two">
             <a href="#" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/parrot.png}" alt="">
-                </span> Parrot Food 
-                <span class="category-menu-two__icon">
-                    <i class="las la-angle-down"></i>
-                </span>
-            </a>
+                <span class="category-menu-two__thumb"> <img th:src="@{/assets/images/icons/parrot.png}" alt="Parrot Icon"></span> Parrot Food <span class="category-menu-two__icon"><i class="las la-angle-down"></i></span></a>
             <ul class="category-dropdown-two">
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/parrot.png}" alt="">
+                          <img th:src="@{/assets/images/icons/parrot.png}" alt="Parrot Icon">
+
                         </span> Category Dropdown One</a>
                 </li>
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/parrot.png}" alt="">
+                         <img th:src="@{/assets/images/icons/parrot.png}" alt="Parrot Icon">
+
                         </span> Category Dropdown Two</a>
                 </li>
                 <li class="category-dropdown-two__item">
-                    <a href="/product-category" class="category-dropdown-two__link">
+                    <a href="product-category.html" class="category-dropdown-two__link">
                         <span class="category-dropdown-two__thumb">
-                            <img th:src="@{/assets/images/icons/parrot.png}" alt="">
+                           <img th:src="@{/assets/images/icons/parrot.png}" alt="Parrot Icon">
+
                         </span> Category Dropdown Three</a>
                 </li>
             </ul>
         </li>
         <li class="category-menu-two__item">
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/rabbit.png}" alt="">
-                </span> Rabbit 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"><span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/rabbit.png}" alt="Rabbit Icon"></span> Rabbit </a>
         </li>
         <li class="category-menu-two__item">
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/accessories.png}" alt="">
-                </span> Accessories 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"><span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/accessories.png}" alt="Accessories Icon"></span> Accessories </a>
         </li>
         <li class="category-menu-two__item">
-            <a href="/product-category" class="category-menu-two__link">
-                <span class="category-menu-two__thumb">
-                    <img th:src="@{/assets/images/icons/dog02.png}" alt="">
-                </span> Small pet 
-            </a>
+            <a href="product-category.html" class="category-menu-two__link"><span class="category-menu-two__thumb"><img th:src="@{/assets/images/icons/dog02.png}" alt="Dog Icon"></span> Small pet </a>
         </li>
      </ul>
      <div class="contact-list__wrapper d-md-none d-block">
         <div class="contact-list">
-            <span class="contact-list__icon">
+             <span class="contact-list__icon">
                 <img th:src="@{/assets/images/icons/phone.png}" alt="">
-            </span>
-            <span class="contact-list__info"> 000 - 8888 - 9999</span>
+
+             </span>
+             <span class="contact-list__info"> 000 - 8888 - 9999</span>
         </div>
         <div class="contact-list">
-            <span class="contact-list__icon">
-                <img th:src="@{/assets/images/icons/email.png}" alt="">
+             <span class="contact-list__icon">
+               <img th:src="@{/assets/images/icons/email.png}" alt="Email Icon">
+
             </span>
-            <span class="contact-list__info">
-                <a href="mailto:email@example.com">[email&#160;protected]</a>
-            </span>
+             <span class="contact-list__info"> <a href="https://template.viserlab.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="14627d677166647160547379757d783a777b79">[email&#160;protected]</a></span>
         </div>
      </div>
 </nav>
-
 
 <!-- ==================== Bottom Header End Here ==================== -->
 <header class="main-header">
@@ -315,7 +284,7 @@
   <!--========================== Search Modal End ==========================-->
 
 <!-- ==================== Breadcumb Start Here ==================== -->
-<section class="breadcumb py-120 bg-img" style="background-image: url('@{/assets/images/thumbs/breadcumb-img.png}');">
+<section class="breadcumb py-120 bg-img" th:style="|background-image: url(@{/assets/images/thumbs/breadcumb-img.png});|">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -340,7 +309,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="account-thumb">
-                       <img th:src="@{${imagePath}}" alt="">
+                       <img th:src="@{/assets/images/thumbs/login-img.png}" alt="Login Image">
 
                     </div>
                 </div>
@@ -350,62 +319,38 @@
                             <h3 class="account-form__title mb-2"> Sign Up Your Account </h3>
                             <p class="account-form__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. ipsam labore dolore sunt laudantium aperiam.</p>
                         </div>
-                        <form action="#" method="POST">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                     <div class="form-group">
-                                        <label for="name" class="form--label"> Name</label>
-                                        <input type="text" class="form--control" id="name" placeholder=" Name">
-                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                     <div class="form-group">
-                                        <label for="username" class="form--label">User Name</label>
-                                        <input type="text" class="form--control" id="username" placeholder="User Name">
-                                     </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="email" class="form--label">Email Address</label>
-                                        <input type="text" class="form--control" id="email" placeholder="Email Address">
-                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="your-password" class="form--label">Password</label>
-                                    <div class="form-group">
-                                        <input id="your-password" type="password" class="form-control form--control" value="Password">
-                                        <div class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="confirm-password" class="form--label">Confirm Password</label>
-                                    <div class="form-group">
-                                        <input id="confirm-password" type="password" class="form-control form--control" value="Confirm Password">
-                                        <div class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#confirm-password"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form--check form-group">
-                                        <input class="form-check-input" type="checkbox" value="" id="remember">
-                                        <div class="form-check-label">
-                                            <label class="" for="remember"> I agree with Licences Info,</label>
-                                            <a href="#" class="text--base">Terms of Service</a>
-                                            <label class="" for="remember"> , Privacy Policy </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                       <button type="submit" class="btn btn--base w-100">Sign Up</button>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="have-account text-center">
-                                        <p class="have-account__text">Already Have An Account? <a href="login.html" class="have-account__link text--base">Login Now</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                     <form role="form" th:action="@{/register}" method="post">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="name" class="form--label">Name</label>
+                <input type="text" class="form--control" id="name" name="name" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="username" class="form--label">User Name</label>
+                <input type="text" class="form--control" id="username" name="username" placeholder="User Name">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="email" class="form--label">Email Address</label>
+                <input type="email" class="form--control" id="email" name="emailAddress" placeholder="Email Address">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label for="your-password" class="form--label">Password</label>
+            <div class="form-group">
+                <input id="your-password" name="password" type="password" class="form-control form--control" placeholder="Password">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn--base w-100">Sign Up</button>
+        </div>
+    </div>
+</form>
+
                     </div>
                 </div>
             </div>
@@ -423,9 +368,7 @@
                 <div class="col-xl-3 col-sm-6">
                     <div class="footer-item">
                         <div class="footer-item__logo">
-                           <a href="index.html"> 
-   <img th:src="@{/assets/images/logo/footer-logo02.png}" alt="">
-</a>
+                            <a href="index.html"> <img th:src="@{/assets/images/logo/footer-logo02.png}" alt="Footer Logo">
 </a>
                         </div>
                         <p class="footer-item__desc"> Maecenas tempus tellus eget cdimentum rhoncus sem quam semper </p>
@@ -494,28 +437,22 @@
 
 <!-- Jquery js -->
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.1.min.js"></script>
-
 <!-- Popper js -->
-<script th:src="@{/assets/js/popper.min.js}"></script>
-
+<script src="assets/js/popper.min.js"></script>
 <!-- Bootstrap Js -->
-<script th:src="@{/assets/js/bootstrap.min.js}"></script>
-
+<script src="assets/js/bootstrap.min.js"></script>
 <!-- Slick js -->
-<script th:src="@{/assets/js/slick.min.js}"></script>
-
+<script src="assets/js/slick.min.js"></script>
 <!-- countdown js -->
-<script th:src="@{/assets/js/jquery.knob.js}"></script>
-<script th:src="@{/assets/js/jquery.throttle.js}"></script>
-<script th:src="@{/assets/js/jquery.classycountdown.min.js}"></script>
-
+<script src="assets/js/jquery.knob.js"></script>
+<script src="assets/js/jquery.throttle.js"></script>
+<script src="assets/js/jquery.classycountdown.min.js"></script>
 <!-- range js -->
-<script th:src="@{/assets/js/jquery-ui.js}"></script>
-
+<script src="assets/js/jquery-ui.js"></script>
 <!-- magnific popup js -->
-<script th:src="@{/assets/js/jquery.magnific-popup.min.js}"></script>
-
-<!-- main js -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+ <!-- main js -->
+ <script src="assets/js/main.js"></script>
 
 </body>
 

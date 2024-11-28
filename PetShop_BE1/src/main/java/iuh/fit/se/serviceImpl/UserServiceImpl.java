@@ -1,12 +1,17 @@
 package iuh.fit.se.serviceImpl;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import iuh.fit.se.dtos.RegisterDTO;
+
 import iuh.fit.se.entities.User;
 import iuh.fit.se.repository.UserRepository;
 import iuh.fit.se.services.UserService;
+import jakarta.transaction.Transactional;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
@@ -14,6 +19,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
     
+	@Autowired
+	ModelMapper modelmapper;
+	
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
@@ -27,12 +35,20 @@ public class UserServiceImpl implements UserService {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         return encoder.matches(password, user.getPassword());
     }
-
+    private RegisterDTO converToDTO (User p) {
+    	RegisterDTO registerDTO = modelmapper.map(p, RegisterDTO.class);
+		return  registerDTO;
+	}
+	
+	private User converToEntity (RegisterDTO pto) {
+		User user = modelmapper.map(pto, User.class);
+		return  user;
+	}
     
    
-
+	@Transactional
     @Override
-    public boolean registerUser(RegisterDTO registerDTO) {
+    public RegisterDTO registerUser(RegisterDTO registerDTO) {
         if (userRepository.findByEmailAddress(registerDTO.getEmailAddress()) != null) {
             throw new RuntimeException("Email đã được sử dụng!");
         }
@@ -43,15 +59,14 @@ public class UserServiceImpl implements UserService {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(registerDTO.getPassword());
 
-        User newUser = new User();
-        newUser.setName(registerDTO.getName());
-        newUser.setUsername(registerDTO.getUsername());
-        newUser.setEmailAddress(registerDTO.getEmailAddress());
-        newUser.setPassword(encodedPassword);
+        User newUser = this.converToEntity(registerDTO);
+        newUser.setPassword(encodedPassword); 
         newUser.setRole("CUSTOMER");
-
+        System.out.println("User saved successfully: " + newUser);
+        System.out.println("User saved successfully: ");
         userRepository.save(newUser);
-        return true;
+        
+        return this.converToDTO(newUser);
     }
 
     
