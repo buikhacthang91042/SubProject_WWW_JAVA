@@ -32,6 +32,14 @@ public class UserController {
     public String goToRegistrationPage() {
         return "registration";  // Trả về view "registration.html"
     }
+    @GetMapping("/cart")
+    public String gotoCardPage() {
+        return "cart";  
+    }
+    @GetMapping("/account")
+    public String gotoAccountPage() {
+        return "account"; 
+    }
     
     // Đăng ký người dùng
     @PostMapping("/register")

@@ -3,6 +3,8 @@ package iuh.fit.se.entities;
 import java.util.List;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +22,9 @@ public class User {
     private String username; // Tên tài khoản
     private String emailAddress; // Địa chỉ email
     private String password; // Mật khẩu
-    private String role; // Vai trò (CUSTOMER, ADMIN)
+    
+    @Enumerated(EnumType.STRING)
+    private Role role; // Vai trò (CUSTOMER, ADMIN)
     
     @OneToMany(mappedBy = "user") // Mối quan hệ 1 user có nhiều order
     private List<Order> orders;
@@ -55,10 +59,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
+
+	public Role getRole() {
 		return role;
 	}
-	public void setRole(String role) {
+	public void setRole(Role role) {
 		this.role = role;
 	}
 	public List<Order> getOrders() {

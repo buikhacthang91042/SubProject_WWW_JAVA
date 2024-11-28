@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 
 import iuh.fit.se.dtos.RegisterDTO;
-
+import iuh.fit.se.entities.Role;
 import iuh.fit.se.entities.User;
 import iuh.fit.se.repository.UserRepository;
 import iuh.fit.se.services.UserService;
@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
 
         User newUser = this.converToEntity(registerDTO);
         newUser.setPassword(encodedPassword); 
-        newUser.setRole("CUSTOMER");
+        newUser.setRole(Role.CUSTOMER);
         System.out.println("User saved successfully: " + newUser);
         System.out.println("User saved successfully: ");
         userRepository.save(newUser);
